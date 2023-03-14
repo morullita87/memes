@@ -5,7 +5,7 @@ import json
 
 sub = st.text_input("subreddit")
 if st.button("Generar meme"):
-	url= "http://meme-api.com/gimme/cats"+sub
+	url= "http://meme-api.com/gimme/"+sub
 	respuesta = requests.get(url)
 	data = json.loads(respuesta.text)
 	meme = data["url"]
